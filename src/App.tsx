@@ -1,5 +1,6 @@
 import "./App.css";
-import UserList from "./components/UserList";
+// import UserList from "./components/UserList";
+import Users from "./components/Users";
 // import AuthUser from "./components/AuthUser";
 // import Login from "./components/Login";
 // import Counter from "./components/Counter";
@@ -17,7 +18,8 @@ function App() {
         <Youtube /> */}
         {/* <Login /> */}
         {/* <AuthUser /> */}
-        <UserList />
+        {/* <UserList /> */}
+        <Users />
       </div>
     </>
   );
