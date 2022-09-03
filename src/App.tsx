@@ -1,7 +1,12 @@
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import UserList from "./components/UserList";
+import About from "./components/About";
+// import UserList from "./components/UserList";
+import Users from "./components/Users";
 // import AuthUser from "./components/AuthUser";
-// import Login from "./components/Login";
+import Login from "./components/Login";
+import Navabr from "./components/Navbar";
+import UserDetail from "./components/UserDetail";
 // import Counter from "./components/Counter";
 // import Youtube from "./components/Youtube";
 // import ClassComp from "./components/ClassComp";
@@ -10,15 +15,13 @@ import UserList from "./components/UserList";
 function App() {
   return (
     <>
-      <div className="container">
-        {/* <ClassComp name="Techinfoyt" age={26} />
-        <FunComp name="Techinfoyt" age={26} /> */}
-        {/* <Counter />
-        <Youtube /> */}
-        {/* <Login /> */}
-        {/* <AuthUser /> */}
-        <UserList />
-      </div>
+      <Navabr />
+      <Routes>
+        <Route path="/" element={<Users />} />
+        <Route path="/users/:id" element={<UserDetail />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
     </>
   );
 }
